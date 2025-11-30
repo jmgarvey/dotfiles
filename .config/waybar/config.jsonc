@@ -121,8 +121,7 @@
     "custom/power": {
         "format": " ⏻ ",
         "tooltip": false,
-        // "on-click": "wlogout --protocol layer-shell"
-        "on-click": "nwg-bar"
+        "on-click": "wleave"
     },
     "custom/sep": {
         "format" : "|",
