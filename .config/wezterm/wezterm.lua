@@ -25,8 +25,6 @@ config.font_size = 15
 
 config.enable_tab_bar = true
 
-config.window_decorations = "RESIZE"
-
 config.window_background_opacity = 0.9
 
 -- Pick a colour scheme. WezTerm ships with more than 1,000!
@@ -101,12 +99,12 @@ end)
 config.keys = {
 	{
 		key = "t",
-		mods = "CMD|SHIFT",
+		mods = "ALT|SHIFT",
 		action = act.ShowTabNavigator,
 	},
 	{
 		key = "R",
-		mods = "CMD|SHIFT",
+		mods = "ALT|SHIFT",
 		action = act.PromptInputLine({
 			description = "Enter new name for tab",
 			action = wezterm.action_callback(function(window, _, line)
@@ -121,7 +119,7 @@ config.keys = {
 	},
 	-- other keys
 }
-for i = 1, 8 do
+for i = 1, 9 do
 	-- CTRL+ALT + number to move to that position
 	table.insert(config.keys, {
 		key = tostring(i),
