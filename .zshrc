@@ -118,7 +118,9 @@ if [[ -d "$HOME/.pyenv" ]]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-export USE_SIM=1
+if [ -f ~/.env.env ]; then
+    set -a && source ~/.env.env && set +a
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
