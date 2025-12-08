@@ -5,7 +5,6 @@
     "height": 30, 
     "spacing": 4, 
 
-    // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
         "custom/sep",
@@ -16,8 +15,6 @@
     ],
 
     "modules-right": [
-        //"custom/sep",
-        //"network",
         "custom/sep",
         "cpu",
         "custom/sep",
@@ -32,7 +29,6 @@
         "clock",
         "custom/sep",
         "tray",
-        //"custom/sep",
         "custom/power",
     ],
 
@@ -52,16 +48,8 @@
         "seperate-outputs": false
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
     },
-    //"clock": {
-    //    "format-alt": "{:%Y-%m-%d}"
-    //},
     "clock": {
         //"timezone": "America/Denver",
         "interval": 1,
@@ -73,7 +61,6 @@
         "tooltip": false
     },
     "memory": {
-        //"format": "Mem: {used}GiB"
         "format": "  {used:0.1f}G/{total:0.1f}G"
     },
     "disk": {
@@ -81,18 +68,6 @@
         "path": "/",
         "format": "Disk: {free}/{total}"
     },
-    //"battery": {
-    //    "states": {
-    //        "good": 95,
-    //        "warning": 30,
-    //        "critical": 15
-    //    },
-    //    "format": "Bat: {capacity}% {icon} {time}",
-    //    "format-plugged": "{capacity}% ",
-    //    "format-alt": "Bat {capacity}%",
-    //    "format-time": "{H}:{M}",
-    //    "format-icons": ["", "", "", "", ""]
-    //},
     "battery": {
         "states": {
             "good": 95,
@@ -100,10 +75,11 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
+        // "full-at": 95,
         //"format-full": "{capacity}% {icon}",
-        //"format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        // "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
