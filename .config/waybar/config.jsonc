@@ -75,13 +75,9 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        // "full-at": 95,
-        //"format-full": "{capacity}% {icon}",
+        "format-full": "{capacity}% 󰂄",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        // "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
