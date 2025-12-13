@@ -25,6 +25,7 @@ config.font = wezterm.font("MonaspiceNe Nerd Font Mono")
 -- config.font = wezterm.font("FiraCode Nerd Font Mono")
 -- config.font = wezterm.font("0xProto Nerd Font Mono")
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.harfbuzz_features = { "ss01=1", "ss02=1" }
 
 config.font_size = 15
 
