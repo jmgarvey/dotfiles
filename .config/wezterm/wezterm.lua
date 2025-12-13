@@ -19,8 +19,13 @@ end
 
 -- This is where you actually apply your config choices
 
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
+-- config.font = wezterm.font("MesloLGS Nerd Font Mono")
+config.font = wezterm.font("MonaspiceNe Nerd Font Mono")
+-- config.font = wezterm.font("Inconsolata LGC Nerd Font Mono")
+-- config.font = wezterm.font("FiraCode Nerd Font Mono")
+-- config.font = wezterm.font("0xProto Nerd Font Mono")
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
+
 config.font_size = 15
 
 config.enable_tab_bar = true
