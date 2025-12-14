@@ -1,5 +1,3 @@
-set tmpdir	= ~/.config/neomutt/tmp
-
 set use_threads = yes       # show email in threads in the Index
 set pager_index_lines = 6   # show this many lines of the Index when
                             # reading email
@@ -20,17 +18,4 @@ set include      = yes    # include the message we're replying to
 set sidebar_visible       = yes
 set sidebar_width         = 20   # width in screen columns
 set sidebar_next_new_wrap = yes  # wrap around the list when scrolling
-
-set mail_check_stats      = yes  # check for new email and show stats
-
-
-set header_cache     = ~/.cache/neomutt/cache/  # where to store headers
-set message_cachedir = ~/.cache/neomutt/cache/  # where to store bodies
-
-set header_cache_compress_method = "zstd"
-set header_cache_compress_level = 3
-
-set message_cache_clean = yes
-
-set tmpdir           = /tmp
 
