@@ -1,0 +1,4 @@
+source ~/.config/mutt/muttrc
+source ~/.config/neomutt/colors
+source ~/.config/neomutt/config
+

@@ -1,0 +1,21 @@
+set use_threads = yes       # show email in threads in the Index
+set pager_index_lines = 6   # show this many lines of the Index when
+                            # reading email
+
+set pager_context = 3       # lines of context between pages
+set pager_stop = yes        # don't scroll off the end of one message onto
+                            # the next
+
+unset markers               # don't show + for wrapped lines in the pager
+set mark_old = no           # don't show 'new' emails as old, if user has
+
+set edit_headers = yes    # allow user to edit message headers
+set editor       = "nvim"  # define which editor to use
+
+set fast_reply   = yes    # skip initial prompts when replying
+set include      = yes    # include the message we're replying to
+
+set sidebar_visible       = yes
+set sidebar_width         = 20   # width in screen columns
+set sidebar_next_new_wrap = yes  # wrap around the list when scrolling
+
