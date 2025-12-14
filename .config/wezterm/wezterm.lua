@@ -8,13 +8,7 @@ local appearance = require("appearance")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- Use it!
-if appearance.is_dark() then
-	config.color_scheme = "Tokyo Night"
-else
-	config.color_scheme = "Tokyo Night Day"
-end
-
+config.color_scheme = "Catppuccin Mocha"
 -- config.colors = require("cyberdream")
 
 -- This is where you actually apply your config choices
