@@ -1,4 +1,7 @@
 set use_threads = yes       # show email in threads in the Index
+set sort = threads 
+set sort_aux = reverse-last-date-received
+
 set pager_index_lines = 6   # show this many lines of the Index when
                             # reading email
 
