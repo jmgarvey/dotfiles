@@ -3,13 +3,11 @@ local wezterm = require("wezterm")
 
 local mux = wezterm.mux
 local act = wezterm.action
-local appearance = require("appearance")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
 config.color_scheme = "Catppuccin Mocha"
--- config.colors = require("cyberdream")
 
 -- This is where you actually apply your config choices
 
