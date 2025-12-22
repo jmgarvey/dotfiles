@@ -1,0 +1,21 @@
+[Added Associations]
+application/pdf=okularApplication_pdf.desktop;
+image/jpeg=swayimg.desktop;imv-dir.desktop;
+image/png=org.kde.gwenview.desktop;swayimg.desktop;imv-dir.desktop;imv.desktop;
+image/webp=imv-dir.desktop;
+video/mp4=vlc.desktop;
+video/mpeg=vlc.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
+
+[Default Applications]
+application/pdf=okularApplication_pdf.desktop;
+image/*=imv-dir.desktop;
+image/jpeg=imv-dir.desktop;
+image/png=imv-dir.desktop;
+video/*=vlc.desktop;
+video/mp4=vlc.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
+x-scheme-handler/terminal=org.wezfurlong.wezterm.desktop;
+image/webp=imv-dir.desktop
