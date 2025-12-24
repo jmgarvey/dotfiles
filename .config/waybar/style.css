@@ -1,14 +1,29 @@
-@define-color bg    #1a1b26; 
-@define-color fg    #a9b1d6; 
-@define-color blk   #32344a; 
-@define-color red   #f7768e; 
-@define-color grn   #9ece6a; 
-@define-color ylw   #e0af68; 
-@define-color blu   #7aa2f7; 
-@define-color mag   #ad8ee6; 
-@define-color cyn   #0db9d7; 
-@define-color brblk #444b6a; 
-@define-color white #ffffff; 
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
 
 * {
     font-family: "MonaspiceNe Nerd Font Mono", monospace;
@@ -17,26 +32,26 @@
 }
 
 window#waybar {
-    background-color: @bg;
-    color: @fg;
+    background-color: @base;
+    color: @text;
 }
 
 #workspaces button {
     padding: 0 6px;
-    color: @cyn;
+    color: @sapphire;
     background: transparent;
-    border-bottom: 3px solid @bg;
+    border-bottom: 3px solid @base;
 }
 #workspaces button.active {
-    color: @cyn;
-    border-bottom: 3px solid @mag;
+    color: @sapphire;
+    border-bottom: 3px solid @pink;
 }
 #workspaces button.empty {
-    color: @white;
+    color: @text;
 }
 #workspaces button.empty.active {
-    color: @cyn;
-    border-bottom: 3px solid @mag;
+    color: @sapphire;
+    border-bottom: 3px solid @pink;
 }
 
 #workspaces button.urgent {
@@ -58,41 +73,41 @@ button:hover {
 #pulseaudio,
 #tray {
     padding: 0 8px;
-    color: @white;
+    color: @text;
 }
 
 #custom-sep {
-    color: @brblk;
+    color: @surface1;
 }
 
 #clock {
-    color: @cyn;
-    border-bottom: 4px solid @cyn;
+    color: @sapphire;
+    border-bottom: 4px solid @sapphire;
 }
 
 #battery {
-    color: @ylw;
-    border-bottom: 4px solid @ylw;
+    color: @peach;
+    border-bottom: 4px solid @peach;
 }
 
 #disk {
-    color: @ylw;
-    border-bottom: 4px solid @ylw;
+    color: @maroon;
+    border-bottom: 4px solid @maroon;
 }
 
 #memory {
-    color: @mag;
-    border-bottom: 4px solid @mag;
+    color: @pink;
+    border-bottom: 4px solid @pink;
 }
 
 #cpu {
-    color: @grn;
-    border-bottom: 4px solid @grn;
+    color: @green;
+    border-bottom: 4px solid @green;
 }
 
 #network {
-    color: @blu;
-    border-bottom: 4px solid @blu;
+    color: @blue;
+    border-bottom: 4px solid @blue;
 }
 
 #network.disconnected {
@@ -100,10 +115,10 @@ button:hover {
 }
 
 #pulseaudio {
-    color: @blu;
-    border-bottom: 4px solid @blu;
+    color: @lavender;
+    border-bottom: 4px solid @lavender;
 }
 
 #tray {
-    background-color: @bg; /* #2980b9; */
+    background-color: @base; /* #2980b9; */
 }
