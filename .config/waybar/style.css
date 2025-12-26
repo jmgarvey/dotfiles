@@ -86,8 +86,8 @@ button:hover {
 }
 
 #battery {
-    color: @peach;
-    border-bottom: 4px solid @peach;
+    color: @green;
+    border-bottom: 4px solid @green;
 }
 
 #disk {
@@ -101,8 +101,8 @@ button:hover {
 }
 
 #cpu {
-    color: @green;
-    border-bottom: 4px solid @green;
+    color: @peach;
+    border-bottom: 4px solid @peach;
 }
 
 #network {
