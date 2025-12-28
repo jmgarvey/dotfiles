@@ -148,6 +148,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+export PATH=$PATH:~/.cargo/bin
+
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f ~/.config/.dart-cli-completion/zsh-config.zsh ]] && . ~/.config/.dart-cli-completion/zsh-config.zsh || true
