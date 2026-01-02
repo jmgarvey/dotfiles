@@ -32,7 +32,7 @@
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: @crust;
     color: @text;
 }
 
@@ -40,7 +40,7 @@ window#waybar {
     padding: 0 6px;
     color: @sapphire;
     background: transparent;
-    border-bottom: 3px solid @base;
+    border-bottom: 3px solid @crust;
 }
 #workspaces button.active {
     color: @sapphire;
@@ -120,5 +120,5 @@ button:hover {
 }
 
 #tray {
-    background-color: @base; /* #2980b9; */
+    background-color: @crust;
 }
