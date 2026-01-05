@@ -6,6 +6,7 @@ local act = wezterm.action
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+local hostname = wezterm.hostname()
 
 config.color_scheme = "Catppuccin Mocha"
 
@@ -20,18 +21,23 @@ config.font = wezterm.font("MonaspiceNe Nerd Font Mono")
 config.harfbuzz_features = { "ss01=1", "ss02=1" }
 
 config.font_size = 15
-
 config.enable_tab_bar = true
-config.use_fancy_tab_bar = false
 
-config.window_background_opacity = 0.9
+if not string.find(hostname, "deck") then
+	config.hide_tab_bar_if_only_one_tab = true
+	config.use_fancy_tab_bar = false
+	config.window_background_opacity = 0.9
+else
+	config.hide_tab_bar_if_only_one_tab = false
+	config.use_fancy_tab_bar = true
+	config.window_background_opacity = 1.0
+end
 
 -- Pick a colour scheme. WezTerm ships with more than 1,000!
 -- Find them here: https://wezfurlong.org/wezterm/colorschemes/index.html
 -- config.color_scheme = 'Banana Blueberry'
 
 config.enable_scroll_bar = true
-config.hide_tab_bar_if_only_one_tab = true
 config.scrollback_lines = 5000
 
 -- Hide the scrollbar when there is no scrollback or alternate screen is active
