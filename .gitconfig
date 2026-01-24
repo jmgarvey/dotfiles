@@ -1,0 +1,35 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	editor = nvim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+
+# Diff and merge
+[merge]
+	conflictStyle = zdiff3
+	log = true
+	tool = nvimdiff2
+[mergetool]
+	prompt = true
+	trustExitCode = true
+	hideResolved = true
+[diff]
+	algorithm = histogram
+	colorMoved = true
+	colorMovedWS = allow-indentation-change
+	mnemonicPrefix = true
+
+	tool = nvim_difftool
+	submodule = diff
+[diff "bin"]
+	textconv = hexdump -v -C
+[difftool]
+	prompt = true
+	trustExitCode = true
+
+[difftool "nvim_difftool"]
+	cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
