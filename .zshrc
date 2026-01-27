@@ -156,3 +156,4 @@ export PATH=$PATH:~/.cargo/bin
 ## [/Completion]
 
 eval "$(zoxide init zsh)"
+export PATH="$HOME/.local/bin:$PATH"
