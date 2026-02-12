@@ -23,7 +23,7 @@ config.harfbuzz_features = { "ss01=1", "ss02=1" }
 config.font_size = 15
 config.enable_tab_bar = true
 
-if not string.find(hostname, "deck") then
+if not (string.find(hostname, "deck") or string.find(hostname, "ml1")) then
 	config.hide_tab_bar_if_only_one_tab = true
 	config.use_fancy_tab_bar = false
 	config.window_background_opacity = 0.9
