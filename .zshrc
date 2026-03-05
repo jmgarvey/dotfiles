@@ -156,4 +156,6 @@ export PATH=$PATH:~/.cargo/bin
 ## [/Completion]
 
 eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=""
 export PATH="$HOME/.local/bin:$PATH"
