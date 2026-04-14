@@ -7,24 +7,19 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(zsh-autosuggestions zsh-syntax-highlighting fzf-tab git)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 if [[ -d "$HOME/.pyenv" ]]; then
   export PYENV_ROOT="$HOME/.pyenv"
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
-if [ -f ~/.env.env ]; then
-    set -a && source ~/.env.env && set +a
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias ls="eza --color=always --icons=always"
-alias df="duf"
-alias cd="z"
+command -v eza >/dev/null 2>&1 && alias ls="eza --color=always --icons=always"
+command -v duf >/dev/null 2>&1 && alias df="duf"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -46,14 +41,17 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-export PATH=$PATH:~/.cargo/bin
-
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f ~/.config/.dart-cli-completion/zsh-config.zsh ]] && . ~/.config/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
-eval "$(zoxide init zsh)"
-eval "$(direnv hook zsh)"
-export DIRENV_LOG_FORMAT=""
-export PATH="$HOME/.local/bin:$PATH"
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+  alias cd="z"
+fi
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+  export DIRENV_LOG_FORMAT=""
+fi
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
