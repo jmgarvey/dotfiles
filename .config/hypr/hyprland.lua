@@ -10,6 +10,28 @@ local work_hosts = {
     pennypacker = true,
 }
 
+local hostname_file = io.open("/etc/hostname", "r")
+local hostname = hostname_file and hostname_file:read("*l") or ""
+if hostname_file then
+    hostname_file:close()
+end
+
+local monitor_mode = "1920x1200"
+if hostname == "chunnel" then
+    local monitors_path = (os.getenv("HOME") or "") .. "/.config/hypr/monitors.conf"
+    local monitors_file = io.open(monitors_path, "r")
+    if monitors_file then
+        for line in monitors_file:lines() do
+            local resolution = line:match("^%s*monitor%s*=%s*eDP%-1%s*,%s*([^,%s]+)")
+            if resolution then
+                monitor_mode = resolution
+                break
+            end
+        end
+        monitors_file:close()
+    end
+end
+
 -- Catppuccin Mocha colors used by Hyprland. mocha.conf remains for hyprlock.
 local pink = "rgb(f5c2e7)"
 local blue = "rgb(89b4fa)"
@@ -40,7 +62,7 @@ local hybrid_graphics =
 
 hl.monitor({
     output = "eDP-1",
-    mode = "1920x1200",
+    mode = monitor_mode,
     position = "-1920x0",
     scale = 1.0,
 })
@@ -170,12 +192,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(terminal, { workspace = "1 silent" })
     hl.exec_cmd(browser, { workspace = "2 silent" })
     hl.exec_cmd("brave-origin", { workspace = "3 silent" })
-
-    local hostname_file = io.open("/etc/hostname", "r")
-    local hostname = hostname_file and hostname_file:read("*l") or ""
-    if hostname_file then
-        hostname_file:close()
-    end
 
     local communication_app = work_hosts[hostname]
         and "slack --ozone-platform=x11"
