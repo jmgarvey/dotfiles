@@ -5,6 +5,7 @@ local terminal = "wezterm"
 local fileManager = "thunar"
 local browser = "librewolf"
 local mainMod = "SUPER"
+local mirrored = false
 local work_hosts = {
     pennypacker = true,
 }
@@ -43,6 +44,19 @@ hl.monitor({
     position = "-1920x0",
     scale = 1.0,
 })
+
+local dp_monitor = {
+    output = "DP-1",
+    mode = "3840x2160",
+    position = "0x0",
+    scale = mirrored and 1.0 or 1.5,
+}
+
+if mirrored then
+    dp_monitor.mirror = "eDP-1"
+end
+
+hl.monitor(dp_monitor)
 
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("XCURSOR_SIZE", "24")
