@@ -9,7 +9,7 @@
         },
         {
             "label": "logout",
-            "action": "hyprctl dispatch exit",
+            "action": "hyprshutdown --vt 1",
             "text": "Logout",
             "keybind": "e",
             "icon": "/usr/share/wleave/icons/logout.svg"
