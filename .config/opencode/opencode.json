@@ -1,0 +1,62 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "notion": {
+      "type": "remote",
+      "url": "https://mcp.notion.com/mcp"
+    },
+    "linear": {
+      "type": "remote",
+      "url": "https://mcp.linear.app/mcp"
+    }
+  },
+  "provider": {
+    "openai": {
+      "models": {
+        "gpt-5.6-luna": {
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          }
+        },
+        "gpt-5.6-luna-fast": {
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          }
+        },
+        "gpt-5.6-sol": {
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          }
+        },
+        "gpt-5.6-sol-fast": {
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          }
+        },
+        "gpt-5.6-terra": {
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          }
+        },
+        "gpt-5.6-terra-fast": {
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          }
+        }
+      }
+    }
+  },
+  "plugin": ["opencode-anthropic-oauth"]
+}
