@@ -1,4 +1,4 @@
 [opener]
 play = [
-	{ run = 'vlc "$@"', desc = "VLC", orphan = true },
+	{ run = "vlc %s", desc = "VLC", orphan = true },
 ]
