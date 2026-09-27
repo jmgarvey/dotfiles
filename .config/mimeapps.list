@@ -10,6 +10,7 @@ x-scheme-handler/https=librewolf.desktop;
 video/x-ms-wmv=vlc.desktop;
 video/quicktime=vlc.desktop;
 video/x-flv=vlc.desktop;
+text/plain=org.neovim.nvim.desktop;
 
 [Default Applications]
 application/pdf=okularApplication_pdf.desktop;
