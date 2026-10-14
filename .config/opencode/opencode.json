@@ -1,57 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "provider": {
+  "providers": {
     "openai": {
       "models": {
-        "gpt-5.6-luna": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
-        "gpt-5.6-luna-fast": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
-        "gpt-5.6-sol": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
-        "gpt-5.6-sol-fast": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
-        "gpt-5.6-terra": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
-        "gpt-5.6-terra-fast": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
-        "gpt-6-astra": {
-          "limit": {
-            "context": 1050000,
-            "input": 922000,
-            "output": 128000
-          }
-        },
         "gpt-6-luna": {
           "limit": {
             "context": 1050000,
@@ -59,10 +10,30 @@
             "output": 128000
           }
         },
-        "gpt-6-sol": {
+        "gpt-6-luna-short": {
+          "modelID": "gpt-6-luna",
+          "name": "GPT-6 Luna Short Context",
           "limit": {
             "context": 1050000,
-            "input": 922000,
+            "input": 250000,
+            "output": 128000
+          }
+        },
+        "gpt-6-sol-short": {
+          "modelID": "gpt-6-sol",
+          "name": "GPT-6 Sol Short Context",
+          "limit": {
+            "context": 1050000,
+            "input": 250000,
+            "output": 128000
+          }
+        },
+        "gpt-6.1-sol-short": {
+          "modelID": "gpt-6.1-sol",
+          "name": "GPT-6.1 Sol Short Context",
+          "limit": {
+            "context": 1050000,
+            "input": 250000,
             "output": 128000
           }
         }
