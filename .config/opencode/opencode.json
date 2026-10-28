@@ -15,7 +15,7 @@
           "name": "GPT-6 Luna Short Context",
           "limit": {
             "context": 1050000,
-            "input": 250000,
+            "input": 272000,
             "output": 128000
           }
         },
@@ -24,7 +24,7 @@
           "name": "GPT-6 Sol Short Context",
           "limit": {
             "context": 1050000,
-            "input": 250000,
+            "input": 272000,
             "output": 128000
           }
         },
@@ -33,7 +33,16 @@
           "name": "GPT-6.1 Sol Short Context",
           "limit": {
             "context": 1050000,
-            "input": 250000,
+            "input": 272000,
+            "output": 128000
+          }
+        },
+        "gpt-6.1-terra-short": {
+          "modelID": "gpt-6.1-terra",
+          "name": "GPT-6.1 Terra Short Context",
+          "limit": {
+            "context": 1050000,
+            "input": 272000,
             "output": 128000
           }
         }
